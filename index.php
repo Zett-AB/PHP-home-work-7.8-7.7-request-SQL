@@ -14,20 +14,21 @@
     <main>
         <header>
             <h1>
-                Домашняя работа по SQL запросам JOIN 
+                Домашняя работа по SQL запросам JOIN
             </h1>
             <h4 class="subtitle">
-                Работа по урокам 7.7. и 7.8 
+                Работа по урокам 7.7. и 7.8
             </h4>
         </header>
         <section class="code-php">
             <?php
-                $nickname="";
-                $hello="";
-                $offer="";
+            $nickname = "";
+            $hello = "";
+            $offer = "";
 
-                echo 
+            echo "<h2 class='subtitle-php'>";
             ?>
+
         </section>
         <section class="begin">
             <div class="bg-task">
