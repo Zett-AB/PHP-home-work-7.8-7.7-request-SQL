@@ -27,30 +27,41 @@
         font-style: normal; 
         font-weight: normal;
 }
+
+h1{
+    font-size: 32px;
+    font-family: Philosopher;
+    text-align: center;    
+}
 h4 {
     font-family: Philosopher;
+    font-size: 22px;
+    text-align: center;
+}
+.code-php{
+    border: 1px solid rgb(48, 129, 250);
+    background-color: beige;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.subtitle-php{
     font-size: 27px;
+    font-family: Philosopher;
+    color: black;
+    text-align: center;
+}
+.subtitle-php-4{
+    font-size: 22px;
+    font-family: Philosopher;
+    text-align: center;
+    line-height: 1.5;
 }
 p {
     font-family: Montserrat Alternates;
-    font-size: 18px;
+    font-size: 17px;
 }
-.code_php {
-    border: 1px solid rgb(0, 153, 255);
-}
-
-a, a:visited, a:hover, a:active {
-    text-decoration: none;
-    /* color: blue; */
-
-}
-.btn-home{
-    text-decoration: none;
-}
-.btn-home:hover{
-    background-color: aqua;
-}
-.btnhome{
-    text-decoration: none;
-    color: red;
+.subtitle-task{
+    font-size: 20px;
+    font-family: Philosopher;
+    padding-left: 50px;
 }
