@@ -36,7 +36,7 @@
         </section>
         <section class="begin">
             <div class="bg-task">
-                <div>
+                <div class="task_one">
                     <h5 class="subtitle-task">
                         Задание 1
                     </h5>
@@ -44,7 +44,7 @@
                         Создаем новую таблицу <span class="new-table">description</span> в нашей БД study7.2lesson и заполняем её данными из таблицы movie.
                     </p>
                 </div>
-                <div>
+                <div class="task_two">
                     <h5 class="subtitle-task">
                         Задание 2
                     </h5>
@@ -52,7 +52,7 @@
                         Проведите эксперименты с запросами INNER, LEFT и RIGHT JOIN в PhpMyAdmin
                     </p>
                 </div>
-                <div>
+                <div class="task_three">
                     <h5 class="subtitle-task">
                         Задание 3
                     </h5>
@@ -208,11 +208,124 @@
             <div>
                 <p>
                     Все первое задание выполнено - таблица descriptions создана и заполнена.<br>
-                    Переходим в выполнению второго задания.
+                    Переходим к выполнению второго задания.
                 </p>
             </div>
         </section>
-        <section class="home-work-two"></section>
+        <section class="home-work-two">
+            <div class="bd_mysql">
+                <h5 class="subtitle-task">
+                    Выполнение задания № 2
+                </h5>
+                <p>
+                    Данное задание мы также будем выполнять в панели управления phpMyAdmin.<br>
+                    В ходе выполнения данного задания мы будем объединять таблицы с помощью разных операторов ранее нами изученных, а именно SELECT, INSERT INTO, INNER, UPDATE, DELETE,INNER JOIN, LEFT JOIN, RIGHT JOIN.
+                </p>
+                <div class="bd_mysql_opert">
+                    <ul class="bd_msql_opert_enu">
+                        <p>
+                            Краткое напоминание о наиболее важных командах в SQL:
+                        </p>
+                        <li>
+                            <b>SELECT</b> - Извлекает данные из базы данных
+                        </li>
+                        <li>
+                            <b>UPDATE</b> - обновляет данные в базе данных
+                        </li>
+                        <li>
+                            <b>DELETE</b> - Удаление данных из базы данных
+                        </li>
+                        <li>
+                            <b>INSERT INTO</b> - Вставка новых данных в базу данных
+                        </li>
+                        <li>
+                            <b>CREATE DATABASE</b> - создает новую базу данных
+                        </li>
+                        <li>
+                            <b>ALTER DATABASE</b> - изменяет базу данных
+                        </li>
+                        <li>
+                            <b>CREATE TABLE</b> - Создание новой таблицы
+                        </li>
+                        <li>
+                            <b>DROP TABLE</b> - Удаление таблицы
+                        </li>
+                        <li>
+                            <b>CREATE INDEX</b> - создает индекс (ключ поиска)
+                        </li>
+                        <li>
+                            <b>DROP INDEX</b> - Удаляет индекс
+                        </li>
+                    </ul>
+                </div>
+                <p>
+                    Однако для выполнения данного задания нам потребуются не все перечисленные выше операторы, а только те которые которые мы изучили и указали их в самом начале.
+                </p>
+                <p>
+                    Оператор/инструкция <b>SELECT</b> - используется для выбора данных из базы данных.<br>
+                    Синтаксис:<br>
+                    SELECT column1, column2, ... FROM table_name;<br>
+                    где<br>
+                    column1, column2, ... - имена полей таблицы, из которой вы хотите выбрать данные.<br>
+                    table_name - имя таблицы .<br>
+                    Если нам надо выбрать все поля то синтаксис будет:<br>
+                    SELECT * FROM table_name;
+                </p>
+                <p>
+                    Оператор/инструкция <b>UPDATE</b> - используется для изменения существующих записей в таблице.<br>
+                    Синтаксис:<br>
+                    UPDATE table_name SET column1=volue1, column2=volue2, ... WHERE condition;<br>
+                    где<br>
+                    column - стобец в котором надо поменять/обновить информацию<br>
+                    volue - новаф информация, которую нужно внести в данный столбец<br>
+                    WHERE - предложение к инструкции, которое указывает, какие записи должны быть обновлены(если не указать будут обновлены все записи)<br>
+                    condition - строка/строки в которой/которых необходимо обновить информацию в таблице.<br>
+                    (Пример:<br>
+                    UPDATE Customers<br>
+                    SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'<br>
+                    WHERE CustomerID = 1; )
+                </p>
+                <p>
+                    DELETE - удаление существующих записей в таблице.<br>
+                    Синтаксис:<br>
+                    DELETE FROM table_name WHERE condition;<br>
+                    Обратите внимание на предложение WHERE в инструкции DELETE.<br>
+                    Предложение WHERE указывает, какие записи должны быть удалены.<br>
+                    Если опустить предложение WHERE, все записи в таблице будут удалены!
+                </p>
+                <p>
+                    INSERT INTO - используется для вставки новых записей в таблице.<br>
+                    Синтаксис:<br>
+                    INSERT INTO table_name(column1, column2, ...) VALUS (value1, value2, ...);<br>
+                    в данном варианте мы определяет как имена столбцов, так и вставляемые значения.<br>
+                    INSERT INTO table_name VALUES (value1, value2, ...);<br>
+                    При добавлении значений для всех столбцов таблицы не требуется указывать имена столбцов в SQL-запросе. Однако убедитесь, что порядок значений находится в том же порядке, что и столбцы в таблице.
+                </p>
+                <p>
+                    JOIN - используется для объединения строк из двух или более таблиц на основе связанного столбца между ними.<br>
+                    LEFT JOIN - возвращает все записи из левой таблицы и совпадающие записи из правой таблицы<br>
+                    RIGHT JOIN - возвращает все записи из правой таблицы и совпадающие записи из левой таблицы.
+                </p>
+            </div>
+            <div class="work_bd_msql">
+                <p>
+                    Теперь после краткого напоминания приступаем к выполнения задания.<br>
+                    Заходим в панель управления phpMyAdmin, активируем нашу базу данных study7.2lesson и видим список таблиц - movie, categories, descriptions.
+                    Для работы с операторами/инструкциями с нашей БД, нам необходимо зайти во вкладку SQL, где мы будем писать свои запросы и затем смотреть результат.
+                </p>
+                <p>
+                    Создадим первый запрос о выводе данных из наших таблиц путем их объединения, несколькими разными способами.<br>
+                    В основном все опрации будем проводит с нашей вновь созданной таблицей descriptions.<br>
+                    Ниже будет синтаксис запроса и по необходимости комментарии к нему.<br>
+                    И так начнем.
+                </p>
+                <p>
+                    Пишем запрос:<br>
+                    SELECT * FROM `descriptions` INNER JOIN movie ON movie.ID=descriptions.id<br>
+                    В данном запросе мы выбрали все данные в таблице descriptions и объеденили их с данными из таблицы movie по столбцам id и ID соответсвенно.
+                </p>
+            </div>
+        </section>
         <section class="home-work-three">
             <?php
 
@@ -258,6 +371,10 @@
 
             while ($row = mysqli_fetch_assoc($query)) {
                 echo "<p class='str_php'>" . $row['id'] . "&nbsp;&nbsp;" . $row['name'] . "&nbsp;&nbsp;" . $row['year'] . "&nbsp;&nbsp;" . $row['names'] . "</p>" . "<br>";
+            }
+
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo "<p class='str_php_r'>" . $row['ID'] . "&nbsp;&nbsp;" . $row['name'] . "&nbsp;&nbsp;" . $row['year'] . "&nbsp;&nbsp;" . $row['description'] . "</p>" . "<br>";
             }
 
             $mysqli->close();
